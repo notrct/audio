@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pro Audio Recorder</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#0f172a,#1e293b,#020617);
+  font-family:'Segoe UI', sans-serif;
+  color:white;
+}
+#container{
+  background:#1e293b;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+  width:360px;
+  text-align:center;
+}
+h2{
+  margin-bottom:20px;
+  font-size:1.5rem;
+}
+.bar{
+  height:20px;
+  background:#334155;
+  border-radius:50px;
+  overflow:hidden;
+  margin-bottom:20px;
+}
+.progress{
+  height:100%;
+  width:0%;
+  border-radius:50px;
+  background:linear-gradient(90deg,#22c55e,#4ade80,#16a34a);
+  transition:width 0.1s linear;
+}
+button{
+  padding:10px 20px;
+  margin:5px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:all 0.2s;
+}
+button:hover{
+  transform:scale(1.05);
+}
+#startBtn{
+  background:#22c55e;
+  color:#000;
+}
+#stopBtn{
+  background:#ef4444;
+  color:#fff;
+}
+#infoCard{
+  margin-top:20px;
+  background:#0f172a;
+  padding:15px;
+  border-radius:15px;
+  text-align:left;
+  font-size:0.9rem;
+  line-height:1.4;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+  <h2 id="status">Ready to Record</h2>
+  <div class="bar">
+    <div class="progress" id="progress"></div>
+  </div>
+  <button id="startBtn">Start Recording</button>
+  <button id="stopBtn" disabled>Stop Recording</button>
+
+  <div id="infoCard">
+    <div><strong>User ID:</strong> <span id="userId">-</span></div>
+    <div><strong>Country:</strong> <span id="country">-</span></div>
+    <div><strong>Sound Size:</strong> <span id="soundSize">-</span></div>
+    <div><strong>Time Zone:</strong> <span id="timezone">-</span></div>
+  </div>
+</div>
+
+<script src="App.js"></script>
+</body>
+</html> 
